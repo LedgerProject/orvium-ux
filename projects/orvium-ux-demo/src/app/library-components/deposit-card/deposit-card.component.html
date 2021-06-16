@@ -1,0 +1,25 @@
+<h1 class="mat-display-3 primary">Deposit Card</h1>
+<h2>Selector: <code>&lt;orv-deposit-card&gt;</code></h2>
+<h2>Input: <code>deposit: Deposit</code></h2>
+<mat-card>
+  <mat-card-content>
+    <orv-deposit-card [deposit]="deposit"></orv-deposit-card>
+  </mat-card-content>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>code</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre><code [highlight]="htmlCode"></code></pre>
+      </mat-tab>
+      <mat-tab label="CSS"> CSS Code</mat-tab>
+      <mat-tab label="TS">
+        TS Code
+      </mat-tab>
+    </mat-tab-group>
+  </mat-expansion-panel>
+</mat-card>
+

@@ -1,0 +1,17 @@
+{
+  "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "../../dist/orvium-ux-lib",
+  "assets": [
+    "styles.scss",
+    "src/lib/themes/light_theme.scss",
+    "src/lib/themes/dark_theme.scss"
+  ],
+  "lib": {
+    "entryFile": "src/public-api.ts",
+    "umdModuleIds": {
+      "@fortawesome/angular-fontawesome": "fortawesome",
+      "@fortawesome/free-brands-svg-icons/faOrcid": "faOrcid",
+      "ngx-gravatar": "ngx-gravatar"
+    }
+  }
+}

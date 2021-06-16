@@ -1,0 +1,75 @@
+<h1 class="mat-display-3 primary">Author Button</h1>
+
+<h2>Selector: <code>&lt;orv-author-button&gt;</code></h2>
+<h2>Input: <code>author: Author, showMenu: boolean</code></h2>
+<mat-card>
+  <mat-card-title>Basic</mat-card-title>
+  <mat-card-content>
+    <orv-author-button [author]="author" [showMenu]=true></orv-author-button>
+
+  </mat-card-content>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>code</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre><code [highlight]="htmlCode1"></code></pre>
+      </mat-tab>
+      <mat-tab label="CSS"> Content 2</mat-tab>
+      <mat-tab label="TS">
+        <pre><code [highlight]="tsCode"></code></pre>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-expansion-panel>
+</mat-card>
+
+<mat-card>
+  <mat-card-title>Aditional information and actions</mat-card-title>
+  <mat-card-content>
+    <orv-author-button [author]="author" [showMenu]=true>
+      <ng-container author-info-list>
+        <mat-list-item>
+          <a mat-icon-button>
+            <mat-icon>account_balance</mat-icon>
+          </a>
+          <div>
+            <span class="mat-body-1" matLine>Institution</span>
+            <span matLine>Orvium</span>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </ng-container>
+      <ng-container author-action-list>
+        <div align="center">
+          <mat-action-list>
+            <button mat-button>
+              <mat-icon matLine>person_add</mat-icon>
+              <span>Follow</span>
+            </button>
+          </mat-action-list>
+        </div>
+      </ng-container>
+    </orv-author-button>
+  </mat-card-content>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>code</mat-icon>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <pre><code [highlight]="htmlCode2"></code></pre>
+      </mat-tab>
+      <mat-tab label="CSS"> CSS Code</mat-tab>
+      <mat-tab label="TS">
+        <pre><code [highlight]="tsCode"></code></pre>
+      </mat-tab>
+    </mat-tab-group>
+
+  </mat-expansion-panel>
+</mat-card>

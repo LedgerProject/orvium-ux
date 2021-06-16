@@ -1,0 +1,51 @@
+::ng-deep .mat-card {
+  border-radius: 0 !important;
+  border: solid 1px #e2e9f0 !important;
+  box-shadow: none !important;
+}
+
+.mat-card mat-card-header {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.mat-standard-chip {
+  min-height: 25px !important;
+  font-size: 12px;
+  border-radius: 10px !important;
+}
+
+p {
+  text-align: justify;
+}
+
+::ng-deep .mat-card-header-text {
+  /* CSS styles go here */
+  margin: 0 !important; // for example to remove the margin
+}
+
+.chip-blue {
+  background-color: #d3e1fc !important;
+  color: #4283fe !important;
+}
+
+.chip-published {
+  $color: mediumseagreen;
+
+  background-color: lighten($color, 40%) !important;
+  color: $color !important;
+}
+
+.chip-preprint {
+  $color: #fead37;
+
+  background-color: lighten($color, 30%) !important;
+  color: $color !important;
+}
+
+.chip-in-review {
+  $color: #e97367;
+
+  background-color: lighten($color, 30%) !important;
+  color: $color !important;
+}

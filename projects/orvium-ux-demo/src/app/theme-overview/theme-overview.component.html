@@ -1,0 +1,60 @@
+<h1 class="mat-display-3 primary">Color Palette</h1>
+<table [dataSource]="dataColors" class="mat-elevation-z2" mat-table>
+
+  <ng-container matColumnDef="color">
+    <th *matHeaderCellDef mat-header-cell> Color</th>
+    <td *matCellDef="let element" mat-cell>
+      <button [color]="element.class" disableRipple mat-raised-button>{{element.class | uppercase}}</button>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="class">
+    <th *matHeaderCellDef mat-header-cell> Class</th>
+    <td *matCellDef="let element" mat-cell><code>{{element.class}}</code></td>
+  </ng-container>
+
+  <ng-container matColumnDef="HEX">
+    <th *matHeaderCellDef mat-header-cell> HEX</th>
+    <td *matCellDef="let element" mat-cell> {{isDark ? element.HEX[1] : element.HEX[0]}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumnsColor" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumnsColor;" mat-row></tr>
+</table>
+<h1 class="mat-headline primary">Typography</h1>
+<table [dataSource]="dataSource" class="mat-elevation-z2" mat-table>
+  <ng-container matColumnDef="text">
+    <th *matHeaderCellDef class="mobile-hidden" mat-header-cell> Text</th>
+    <td *matCellDef="let element" class="mobile-hidden" mat-cell><span [ngClass]="element.class" class="text">{{element.text}}</span></td>
+  </ng-container>
+
+  <ng-container matColumnDef="class">
+    <th *matHeaderCellDef class="first" mat-header-cell> Class</th>
+    <td *matCellDef="let element" class="first" mat-cell><code>{{element.class}}</code></td>
+  </ng-container>
+
+  <ng-container matColumnDef="description">
+    <th *matHeaderCellDef mat-header-cell> Description</th>
+    <td *matCellDef="let element" mat-cell> {{element.description}} </td>
+  </ng-container>
+
+  <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+</table>
+<h1 class="mat-headline primary">Logos</h1>
+<table [dataSource]="dataLogo" class="mat-elevation-z2" mat-table>
+  <ng-container matColumnDef="logo">
+    <th *matHeaderCellDef mat-header-cell> Logo</th>
+    <td *matCellDef="let element" mat-cell><img [src]="element.url" alt="Orvium Logo" height="40em"></td>
+  </ng-container>
+  <ng-container matColumnDef="extension">
+    <th *matHeaderCellDef mat-header-cell> Extension</th>
+    <td *matCellDef="let element" mat-cell><span class="mat-caption">{{element.extension}}</span></td>
+  </ng-container>
+  <ng-container matColumnDef="link">
+    <th *matHeaderCellDef mat-header-cell> Link</th>
+    <td *matCellDef="let element" mat-cell><a [href]="element.url" class="primary" target="_blank">View</a></td>
+  </ng-container>
+  <tr *matHeaderRowDef="displayedColumnsLogo" mat-header-row></tr>
+  <tr *matRowDef="let row; columns: displayedColumnsLogo;" mat-row></tr>
+</table>

@@ -1,0 +1,29 @@
+<mat-sidenav-container class="sidenav mat-app-background">
+  <mat-sidenav #sidenav [fixedInViewport]="smallScreen"
+               [mode]="smallScreen ? 'over' : 'side'"
+               fixedTopGap="56">
+    <mat-nav-list>
+      <button [routerLink]="['deposit-card']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Deposit Card</span>
+      </button>
+      <button [routerLink]="['author-button']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Author Button</span>
+      </button>
+      <button [routerLink]="['progress']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Community Card</span>
+      </button>
+      <button [routerLink]="['spinner']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Spinner</span>
+      </button>
+      <button [routerLink]="['theme-details']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Theme Details</span>
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="content">
+    <div class="main-content ">
+      <router-outlet (activate)="resetPosition()" class="router-outlet"></router-outlet>
+    </div>
+    <app-footer class="footer"></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

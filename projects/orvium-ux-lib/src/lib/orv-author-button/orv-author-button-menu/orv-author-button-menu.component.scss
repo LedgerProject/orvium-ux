@@ -1,0 +1,23 @@
+.mat-list-item {
+  align-items: center;
+}
+
+.mat-list-item:last-child {
+  .mat-divider {
+    display: none;
+  }
+}
+
+.mat-icon {
+  font-size: 1.5em;
+}
+
+.mat-list .mat-list-item .mat-action-list {
+  display: inline-flex;
+  align-items: center;
+}
+
+::ng-deep .mat-list-base .mat-list-item:not(:first-child) {
+  height: max-content;
+  margin-top: 1em;
+}

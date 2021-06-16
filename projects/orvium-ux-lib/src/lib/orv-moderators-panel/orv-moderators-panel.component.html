@@ -1,0 +1,23 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title class="primary">Moderators</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-list role="list">
+      <mat-list-item *ngFor="let moderator of moderators">
+        <img [md5Hash]="moderator.gravatar || '2e7854c294602808422223306eff0e33'" [routerLink]="['/profile', moderator.nickname]"
+             class="pointer"
+             mat-card-avatar
+             ngxGravatar/>
+        <div>
+          <span>
+            {{ moderator.firstName }} {{ moderator.lastName}}
+          </span>
+          <span class="mat-card-subtitle">
+            {{ moderator.institution }}
+          </span>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

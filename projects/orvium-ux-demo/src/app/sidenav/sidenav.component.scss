@@ -1,0 +1,38 @@
+.sidenav {
+  height: 93vh;
+}
+
+.mat-sidenav {
+  width: 15em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+
+  *:not(.router-outlet) {
+    flex: 1;
+    display: block;
+  }
+
+  flex-direction: column;
+  margin: 2em auto 1em auto;
+  width: 70%;
+}
+
+.footer {
+  align-self: center;
+  font-style: italic;
+}
+
+// Mobile
+@media (max-width: 768px) {
+  .mat-sidenav {
+    width: 12em;
+  }
+}

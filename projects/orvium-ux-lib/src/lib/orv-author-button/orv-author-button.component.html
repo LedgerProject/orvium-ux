@@ -1,0 +1,16 @@
+<button *ngIf="!showMenu"
+        disableRipple mat-button>
+  {{author.name}} {{author.surname}}
+</button>
+<button *ngIf="showMenu"
+        [matMenuTriggerFor]="authorMenu"
+        mat-button>
+  {{author.name}} {{author.surname}}
+  <fa-icon [icon]="['fab', 'orcid']" [style]="{color: '#A6CE39'}" size="lg"></fa-icon>
+</button>
+<mat-menu #authorMenu="matMenu" (click)="$event.stopPropagation()" [overlapTrigger]="false" xPosition="before">
+  <orv-author-button-menu [author]="author">
+    <ng-content author-info-list select="[author-info-list]"></ng-content>
+    <ng-content author-action-list select="[author-action-list]"></ng-content>
+  </orv-author-button-menu>
+</mat-menu>

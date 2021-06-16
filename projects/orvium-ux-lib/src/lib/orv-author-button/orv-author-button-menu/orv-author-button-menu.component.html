@@ -1,0 +1,34 @@
+<mat-list (click)="$event.stopPropagation()">
+  <mat-list-item (click)="$event.stopPropagation()">
+    <a mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </a>
+    <div>
+      <span *ngIf="author.name || author.surname" class="mat-body-1" matLine>{{ author.name + '' + author.surname}}</span>
+      <span *ngIf="author.email" matLine>{{ author.email }}</span>
+    </div>
+    <mat-divider></mat-divider>
+  </mat-list-item>
+  <mat-list-item (click)="$event.stopPropagation()" *ngIf="author.credit && author.credit?.length != 0">
+    <a href="https://casrai.org/credit/"
+       mat-icon-button
+       matTooltip="CRediT roles"
+       target="_blank">
+      <mat-icon>help_outline</mat-icon>
+    </a>
+    <div>
+      <span class="mat-body-1" matLine><strong>CRediT</strong></span>
+      <span>{{author.credit}}</span>
+    </div>
+  </mat-list-item>
+  <mat-list-item (click)="$event.stopPropagation()" *ngIf="author.orcid">
+    <a href="{{author.orcid}}" mat-icon-button target="_blank">
+      <fa-icon [icon]="['fab', 'orcid']" [style]="{color: '#A6CE39'}" size="lg"></fa-icon>
+    </a>
+    <span>{{author.orcid | slice:-19}}</span>
+  </mat-list-item>
+  <ng-content select="[author-info-list]"></ng-content>
+</mat-list>
+<mat-action-list>
+  <ng-content select="[author-action-list]"></ng-content>
+</mat-action-list>

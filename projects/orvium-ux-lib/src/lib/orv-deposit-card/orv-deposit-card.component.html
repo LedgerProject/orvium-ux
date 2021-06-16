@@ -1,0 +1,37 @@
+<mat-card class="orv-card">
+  <mat-chip-list class="orv-chip">
+    <mat-chip class="chip-{{deposit.status}}">{{deposit.status | titlecase}}</mat-chip>
+    <mat-chip *ngIf="deposit.community" class="chip-blue">{{deposit.community.name}}</mat-chip>
+    <mat-chip class="chip-blue">{{deposit.publicationType | titlecase}}</mat-chip>
+    <mat-chip class="chip-blue">{{deposit.accessRight | uppercase}}</mat-chip>
+    <mat-chip *ngIf="deposit.canBeReviewed"
+              class="chip-blue"
+              matBadge="{{ deposit.peerReviews.length }}"
+              matBadgeColor="primary"
+              matBadgePosition="after">
+      {{deposit.reviewType | titlecase}}
+    </mat-chip>
+  </mat-chip-list>
+  <mat-card-header>
+    <mat-card-title>
+      <a [routerLink]="['/deposits', deposit._id, 'view']">
+        {{ deposit.title }}
+      </a>
+    </mat-card-title>
+    <mat-card-subtitle *ngIf="deposit.status==DEPOSIT_STATUS.inReview && deposit.authors.length==0"
+                       id="hiddenAuthors">Hidden authors
+    </mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-card-subtitle class="authors" id="authors">
+    {{(deposit.publicationDate | date:'dd MMMM yyyy') || (deposit.submissionDate | date:'dd MMMM yyyy')}} | By
+    <orv-author-button *ngFor="let author of deposit.authors"
+                       [author]="author" [showMenu]="true">
+    </orv-author-button>
+  </mat-card-subtitle>
+  <mat-card-content>
+    <orv-show-more *ngIf="deposit.abstract"
+                   [id]="deposit._id"
+                   [text]="deposit.abstract"></orv-show-more>
+  </mat-card-content>
+</mat-card>
