@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import { NgxSpinner, PRIMARY_SPINNER, Spinner } from './orv-spinner.enum';
 
@@ -14,7 +14,7 @@ export class OrvSpinnerService {
    *
    * @memberof NgxSpinnerService
    */
-  // @ts-ignore
+    // @ts-ignore
   private spinnerObservable = new BehaviorSubject<NgxSpinner>(null);
 
   /**

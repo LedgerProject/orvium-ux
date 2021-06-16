@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Deposit, DEPOSIT_STATUS } from '../model/orvium-ux-model';
+import { DEPOSIT_STATUS } from '../model/orvium-ux-model';
+import { DepositDTO } from '../model/api';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -19,7 +20,7 @@ import { Deposit, DEPOSIT_STATUS } from '../model/orvium-ux-model';
   ]
 })
 export class OrvDepositCardComponent implements OnInit {
-  @Input() deposit: Deposit = new Deposit();
+  @Input() deposit: DepositDTO = new DepositDTO();
   truncateLength = 50;
   state = 'closed';
   displayText = '';

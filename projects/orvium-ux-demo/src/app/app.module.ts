@@ -27,6 +27,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ThemeOverviewComponent } from './theme-overview/theme-overview.component';
 import { MatTableModule } from '@angular/material/table';
 import { SpinnerComponent } from './library-components/spinner/spinner.component';
+import { DepositStatusInfoComponent } from './library-components/deposit-status-info/deposit-status-info.component';
+import { MatSelectModule } from '@angular/material/select';
+import { AccessDeniedComponent } from './library-components/access-denied/access-denied.component';
 
 @NgModule({
   declarations: [
@@ -39,29 +42,33 @@ import { SpinnerComponent } from './library-components/spinner/spinner.component
     ProgressComponent,
     ModeratorsPanelComponent,
     ThemeOverviewComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    DepositStatusInfoComponent,
+    SpinnerComponent,
+    AccessDeniedComponent
   ],
-    imports: [
-        BrowserModule,
-        MatListModule,
-        MatIconModule,
-        BrowserAnimationsModule,
-        FontAwesomeModule,
-        MatSidenavModule,
-        MatCardModule,
-        MatButtonModule,
-        OrviumUxLibModule,
-        RouterModule.forRoot([{path: '', component: AppComponent}]),
-        MatChipsModule,
-        MatToolbarModule,
-        RoutingModule,
-        MatExpansionModule,
-        MatTabsModule,
-        MatButtonModule,
-        HighlightModule,
-        MatMenuModule,
-        MatTableModule
-    ],
+  imports: [
+    BrowserModule,
+    MatListModule,
+    MatIconModule,
+    BrowserAnimationsModule,
+    FontAwesomeModule,
+    MatSidenavModule,
+    MatCardModule,
+    MatButtonModule,
+    OrviumUxLibModule,
+    RouterModule.forRoot([{ path: '', component: AppComponent }]),
+    MatChipsModule,
+    MatToolbarModule,
+    RoutingModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatButtonModule,
+    HighlightModule,
+    MatMenuModule,
+    MatTableModule,
+    MatSelectModule
+  ],
   providers: [
     {
       provide: HIGHLIGHT_OPTIONS,

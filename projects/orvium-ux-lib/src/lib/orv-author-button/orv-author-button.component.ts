@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Author } from '../model/orvium-ux-model';
+import { AuthorDTO } from '../model/api';
 
 @Component({
   // tslint:disable-next-line:component-selector
@@ -8,7 +8,7 @@ import { Author } from '../model/orvium-ux-model';
   styleUrls: ['./orv-author-button.component.scss']
 })
 export class OrvAuthorButtonComponent {
-  @Input() author: Author = new Author();
+  @Input() author: AuthorDTO = new AuthorDTO();
   @Input() showMenu = true;
 
   constructor() {

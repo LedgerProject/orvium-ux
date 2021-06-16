@@ -1,10 +1,12 @@
-<mat-card class="orv-card">
+<div class="orv-card">
+<mat-card>
   <mat-chip-list class="orv-chip">
     <mat-chip class="chip-{{deposit.status}}">{{deposit.status | titlecase}}</mat-chip>
     <mat-chip *ngIf="deposit.community" class="chip-blue">{{deposit.community.name}}</mat-chip>
     <mat-chip class="chip-blue">{{deposit.publicationType | titlecase}}</mat-chip>
     <mat-chip class="chip-blue">{{deposit.accessRight | uppercase}}</mat-chip>
     <mat-chip *ngIf="deposit.canBeReviewed"
+              [matBadgeHidden]="deposit.peerReviews.length === 0"
               class="chip-blue"
               matBadge="{{ deposit.peerReviews.length }}"
               matBadgeColor="primary"
@@ -35,3 +37,4 @@
                    [text]="deposit.abstract"></orv-show-more>
   </mat-card-content>
 </mat-card>
+</div>

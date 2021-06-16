@@ -3,6 +3,9 @@
                [mode]="smallScreen ? 'over' : 'side'"
                fixedTopGap="56">
     <mat-nav-list>
+      <button [routerLink]="['access-denied']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Access Denied</span>
+      </button>
       <button [routerLink]="['deposit-card']" mat-menu-item matSubheader routerLinkActive="active-link">
         <span>Deposit Card</span>
       </button>
@@ -14,6 +17,9 @@
       </button>
       <button [routerLink]="['spinner']" mat-menu-item matSubheader routerLinkActive="active-link">
         <span>Spinner</span>
+      </button>
+      <button [routerLink]="['deposit-status-info']" mat-menu-item matSubheader routerLinkActive="active-link">
+        <span>Deposit Status Info</span>
       </button>
       <button [routerLink]="['theme-details']" mat-menu-item matSubheader routerLinkActive="active-link">
         <span>Theme Details</span>

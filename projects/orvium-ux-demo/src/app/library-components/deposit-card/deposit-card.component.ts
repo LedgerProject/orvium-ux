@@ -1,5 +1,12 @@
 import { Component } from '@angular/core';
-import { ACCESS_RIGHT, Deposit, DEPOSIT_STATUS, PUBLICATION_TYPE, REVIEW_TYPE } from '../../../app-model';
+import {
+  ACCESS_RIGHT,
+  CREDIT_TYPE,
+  DEPOSIT_STATUS,
+  DepositDTO,
+  PUBLICATION_TYPE,
+  REVIEW_TYPE
+} from '../../../../../orvium-ux-lib/src/lib/model/api';
 
 @Component({
   selector: 'app-deposit-card',
@@ -9,7 +16,7 @@ import { ACCESS_RIGHT, Deposit, DEPOSIT_STATUS, PUBLICATION_TYPE, REVIEW_TYPE } 
 export class DepositCardComponent {
 
   htmlCode = '<orv-deposit-card [deposit]="deposit"></orv-deposit-card>';
-  deposit: Deposit = {
+  deposit: DepositDTO = {
     _id: '123412341234',
     owner: 'antonio',
     nickname: 'nickname',
@@ -42,29 +49,30 @@ export class DepositCardComponent {
     status: DEPOSIT_STATUS.published,
     peerReviews: [],
     reviewType: REVIEW_TYPE.openReview,
-    authors: [{ name: 'John', surname: 'Doe', orcid: 'https://orcid.org/0000-0002-9628-8306' }, { name: 'William', surname: 'Wallace' }],
+    authors: [{ name: 'John', surname: 'Doe', orcid: 'https://orcid.org/0000-0000-0000-0000' }, { name: 'William', surname: 'Wallace' },
+      {
+        name: 'Sergio',
+        surname: 'Rodriguez',
+        email: 'example@orvium.io',
+        orcid: 'https://orcid.org/0000-0000-0000-0000',
+        credit: [CREDIT_TYPE.conceptualization, CREDIT_TYPE.formalAnalysis]
+      }],
     keywords: ['science', 'cloud'],
-    keccak256: '0x1111111111111111111111111111111111111111111111111111111111111111',
     files: [],
     doi: '10.1000/182',
-    url: '',
-    pdfUrl: '',
-    gravatar: '11111111111111111111111111111111',
     disciplines: ['Abnormal psychology', 'Acoustics'],
     references: [],
     canBeReviewed: true,
     ownerProfile: {
       userId: 'antonio',
-      email: 'test@orvium.io',
-      userType: 'researcher',
-      isReviewer: false,
-      isOnboarded: false,
-      emailConfirmed: false,
-      percentageComplete: 0,
-      roles: [],
-      disciplines: [],
-      acceptedTC: true
-    }
+      firstName: 'Antonio',
+      lastName: 'Romero',
+      gravatar: '11111111111111111111111111111111',
+      communities: [],
+      institution: 'Orvium',
+      nickname: 'antonio-romero'
+    },
+    actions: []
   };
 
   constructor() {

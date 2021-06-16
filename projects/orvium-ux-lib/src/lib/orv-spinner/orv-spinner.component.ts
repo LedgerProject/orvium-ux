@@ -1,17 +1,8 @@
-import {
-  Component,
-  OnDestroy,
-  Input,
-  OnInit,
-  OnChanges,
-  SimpleChange,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnChanges, OnDestroy, OnInit, SimpleChange } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { LOADERS, DEFAULTS, Size, NgxSpinner, PRIMARY_SPINNER } from './orv-spinner.enum';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { DEFAULTS, LOADERS, NgxSpinner, PRIMARY_SPINNER, Size } from './orv-spinner.enum';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { OrvSpinnerService } from './orv-spinner.service';
 
 @Component({

@@ -1,27 +1,29 @@
-::ng-deep .mat-card {
-  border-radius: 0 !important;
-  border: solid 1px #e2e9f0 !important;
-  box-shadow: none !important;
-}
+.orv-card {
+  ::ng-deep .mat-card {
+    border-radius: 0;
+    border: solid 1px #e2e9f0;
+    box-shadow: none;
+  }
 
-.mat-card mat-card-header {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
+  .mat-card mat-card-header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 
-.mat-standard-chip {
-  min-height: 25px !important;
-  font-size: 12px;
-  border-radius: 10px !important;
-}
+  .mat-standard-chip {
+    min-height: 25px;
+    font-size: 12px;
+    border-radius: 10px;
+  }
 
-p {
-  text-align: justify;
-}
+  p {
+    text-align: justify;
+  }
 
-::ng-deep .mat-card-header-text {
-  /* CSS styles go here */
-  margin: 0 !important; // for example to remove the margin
+  ::ng-deep .mat-card-header-text {
+    /* CSS styles go here */
+    margin: 0; // for example to remove the margin
+  }
 }
 
 .chip-blue {

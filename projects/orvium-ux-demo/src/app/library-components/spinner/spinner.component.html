@@ -4,8 +4,8 @@
 <mat-card>
   <mat-card-title>Button Spinner</mat-card-title>
   <mat-card-content>
-    <button mat-raised-button (click)="activateSpinner('buttonSpinner')">
-      <orv-spinner name="buttonSpinner" [fullScreen]="false"></orv-spinner>
+    <button (click)="activateSpinner('buttonSpinner')" mat-raised-button>
+      <orv-spinner [fullScreen]="false" name="buttonSpinner"></orv-spinner>
       Activate spinner
     </button>
   </mat-card-content>
@@ -27,14 +27,14 @@
   </mat-expansion-panel>
 </mat-card>
 
-<orv-spinner name="screenSpinner" bdColor="rgba(51,51,51,0.5)" size="medium" color="#377dff" type="ball-clip-rotate"
-             [fullScreen]="true">
+<orv-spinner [fullScreen]="true" bdColor="rgba(51,51,51,0.5)" color="#377dff" name="screenSpinner" size="medium"
+             type="ball-clip-rotate">
 </orv-spinner>
 
 <mat-card>
   <mat-card-title>Screen Spinner</mat-card-title>
   <mat-card-content>
-    <button mat-raised-button (click)="activateSpinner('screenSpinner')">Activate Spinner</button>
+    <button (click)="activateSpinner('screenSpinner')" mat-raised-button>Activate Spinner</button>
   </mat-card-content>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
@@ -53,7 +53,5 @@
     </mat-tab-group>
   </mat-expansion-panel>
 </mat-card>
-
-
 
 

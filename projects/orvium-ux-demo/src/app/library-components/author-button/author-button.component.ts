@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Author, CREDIT_TYPE } from '../../../app-model';
+import { AuthorDTO, CREDIT_TYPE } from '../../../../../orvium-ux-lib/src/lib/model/api';
 
 @Component({
   selector: 'app-author-button',
@@ -25,13 +25,20 @@ export class AuthorButtonComponent {
     '    orcid: \'https://orcid.org/0000-0000-0000-0000\',\n' +
     '    credit: [CREDIT_TYPE.conceptualization, CREDIT_TYPE.formalAnalysis]\n' +
     '  };';
-  author: Author = {
+  author: AuthorDTO = {
     name: 'Sergio',
     surname: 'Rodriguez',
     email: 'example@orvium.io',
     orcid: 'https://orcid.org/0000-0000-0000-0000',
     credit: [CREDIT_TYPE.conceptualization, CREDIT_TYPE.formalAnalysis]
   };
+
+  authors = [this.author,
+    {
+      name: 'Roberto',
+      surname: 'Rabasco',
+      email: 'example@orvium.io'
+    }];
 
   constructor() {
   }

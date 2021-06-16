@@ -17,6 +17,8 @@ import { OrvModeratorsPanelComponent } from './orv-moderators-panel/orv-moderato
 import { GravatarModule } from 'ngx-gravatar';
 import { OrvSpinnerComponent } from './orv-spinner/orv-spinner.component';
 import { SafeHtmlPipe } from './orv-spinner/safe-html.pipe';
+import { OrvDepositStatusInfoComponent } from './orv-deposit-status-info/orv-deposit-status-info.component';
+import { OrvAccessDeniedComponent } from './orv-access-denied/orv-access-denied.component';
 
 
 @NgModule({
@@ -27,7 +29,10 @@ import { SafeHtmlPipe } from './orv-spinner/safe-html.pipe';
     OrvDepositCardComponent,
     OrvModeratorsPanelComponent,
     OrvSpinnerComponent,
-    SafeHtmlPipe
+    SafeHtmlPipe,
+    OrvDepositStatusInfoComponent,
+    SafeHtmlPipe,
+    OrvAccessDeniedComponent
   ],
   imports: [
     MatMenuModule,
@@ -42,7 +47,13 @@ import { SafeHtmlPipe } from './orv-spinner/safe-html.pipe';
     MatBadgeModule,
     GravatarModule
   ],
-  exports: [OrvAuthorButtonMenuComponent, OrvAuthorButtonComponent, OrvDepositCardComponent, OrvModeratorsPanelComponent, OrvSpinnerComponent]
+  exports: [OrvAuthorButtonMenuComponent,
+    OrvAuthorButtonComponent,
+    OrvDepositCardComponent,
+    OrvModeratorsPanelComponent,
+    OrvSpinnerComponent,
+    OrvDepositStatusInfoComponent,
+    OrvAccessDeniedComponent]
 })
 export class OrviumUxLibModule {
 }

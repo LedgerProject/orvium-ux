@@ -1,0 +1,51 @@
+<div class="status-bar">
+  <div [ngClass]="statusClasses[0]">
+    <div class="v-stepper">
+      <div class="circle">
+        <mat-icon style="display: inline; font-size: 1.2em; color: white;">check</mat-icon>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="content">
+      <h1 class="mat-headline">Draft</h1>
+      <p class="mat-subheading-1 grey">Upload your paper, add disciplines, keywords, authors and citations. <strong>Preview</strong> your
+        work and
+        validate it before sending it to review.</p>
+    </div>
+  </div>
+  <div [ngClass]="statusClasses[1]">
+    <div class="v-stepper">
+      <div class="circle">
+        <mat-icon style="display: inline; font-size: 1.2em; color: white;">check</mat-icon>
+      </div>
+      <div class="line notCompleted"></div>
+    </div>
+    <div class="content">
+      <h1 class="mat-headline">Pending Approval</h1>
+      <p class="mat-subheading-1 grey">We will check the content, format and metadata of your article.</p>
+    </div>
+  </div>
+  <div [ngClass]="statusClasses[2]">
+    <div class="v-stepper">
+      <div class="circle">
+        <mat-icon style="display: inline; font-size: 1.2em; color: white;">check</mat-icon>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div class="content">
+      <h1 class="mat-headline">Preprint</h1>
+      <p class="mat-subheading-1 grey"><strong>Share</strong> your article within your network and recommend reviewers.</p>
+    </div>
+  </div>
+  <div [ngClass]="statusClasses[3]">
+    <div class="v-stepper">
+      <div class="circle">
+        <mat-icon style="display: inline; font-size: 1.2em; color: white;">check</mat-icon>
+      </div>
+    </div>
+    <div class="content">
+      <h1 class="mat-headline">Published</h1>
+      <p class="mat-subheading-1 grey">Boost productivity and increase your awareness</p>
+    </div>
+  </div>
+</div>

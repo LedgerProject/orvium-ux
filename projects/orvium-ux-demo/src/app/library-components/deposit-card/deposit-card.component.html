@@ -1,10 +1,8 @@
 <h1 class="mat-display-3 primary">Deposit Card</h1>
 <h2>Selector: <code>&lt;orv-deposit-card&gt;</code></h2>
-<h2>Input: <code>deposit: Deposit</code></h2>
+<h2>Input: <code>deposit: DepositDTO</code></h2>
+<orv-deposit-card [deposit]="deposit"></orv-deposit-card>
 <mat-card>
-  <mat-card-content>
-    <orv-deposit-card [deposit]="deposit"></orv-deposit-card>
-  </mat-card-content>
   <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>

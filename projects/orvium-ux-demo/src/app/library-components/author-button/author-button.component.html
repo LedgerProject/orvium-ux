@@ -1,11 +1,10 @@
 <h1 class="mat-display-3 primary">Author Button</h1>
-
 <h2>Selector: <code>&lt;orv-author-button&gt;</code></h2>
 <h2>Input: <code>author: Author, showMenu: boolean</code></h2>
 <mat-card>
   <mat-card-title>Basic</mat-card-title>
   <mat-card-content>
-    <orv-author-button [author]="author" [showMenu]=true></orv-author-button>
+    <orv-author-button *ngFor="let author of authors" [author]="author" [showMenu]=true></orv-author-button>
 
   </mat-card-content>
   <mat-expansion-panel>
